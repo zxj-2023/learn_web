@@ -1,0 +1,65 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.app-header {
+  background-color: #282c34;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.auth-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-text {
+  font-weight: 500;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.app-footer {
+  background-color: #e9ecef;
+  text-align: center;
+  padding: 1rem;
+  color: #6c757d;
+  border-top: 1px solid #dee2e6;
+}
+
+.app-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
