@@ -8,5 +8,7 @@ dependencies = [
     "fastapi>=0.120.0",
     "fastapi-sessions>=0.3.2",
     "loguru>=0.7.3",
+    "pyjwt>=2.10.1",
+    "python-multipart>=0.0.20",
     "uvicorn>=0.38.0",
 ]

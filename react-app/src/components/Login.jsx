@@ -12,7 +12,6 @@ function Login({ onLoginSuccess }) {
         try {
             const response = await fetch('http://localhost:8000/login', {
                 method: 'POST',
-                credentials: 'include', // 重要：包含cookies
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -20,6 +19,8 @@ function Login({ onLoginSuccess }) {
 
             if (response.ok) {
                 const data = await response.json()
+                // 将JWT token存储到localStorage
+                localStorage.setItem('access_token', data.access_token)
                 setMessage(data.msg)
                 onLoginSuccess()
             } else {

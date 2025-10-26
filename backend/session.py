@@ -60,7 +60,7 @@ def main():
     import uvicorn
     print("Starting FastAPI backend server...")
     uvicorn.run(
-        "backend.app:app",
+        "backend.session:app",
         host="127.0.0.1",
         reload=True,
         port=8000,
