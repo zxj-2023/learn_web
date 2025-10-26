@@ -72,6 +72,9 @@ def profile(request: Request):
         if auth_header and auth_header.startswith("Bearer "):
             # 提取Bearer后面的token部分
             token = auth_header.split(" ")[1]
+    # 如果仍未获取到token，返回错误
+    if not token:
+        return {"error": "请先登录", "user_id": None}
     
     # 验证token并获取用户名
     username = verify_token(token)
